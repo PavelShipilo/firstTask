@@ -48,4 +48,28 @@ if (-1 && 0) alert( 'second' );
 if (null || -1 && 1) alert( 'third' );
 */
 //Решение: выведутся первый и третий алерты; true, false, true.
-/*Задача 9. */
+/*Задача 9.
+последняя задача в статье https://learn.javascript.ru/logical-operators долго переписывать условие*/
+// Решение
+let login;
+let password;
+login = prompt("Who's here", '');
+ if (login == 'Админ'){
+  password = prompt('Пароль','');
+  if (password == 'Я главный'){
+   alert('Здравствуйте!');
+  }
+  else if (password == null || password = ''){
+  alert('Отменено');
+  }
+  else {
+  alert('Неверный пароль');
+  }
+
+}
+ else if (login == null || login == ''){
+  alert('Отменено');
+}
+ else {
+  alert('Я вас не знаю');
+}
