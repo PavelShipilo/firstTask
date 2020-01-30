@@ -19,3 +19,17 @@ function argumentType(argument){
 console.log(typeof argument);
 }
 argumentType('dsfdsf');
+
+//Задание 4 Функция выбора четных элементов массива(возвращает новый массив)
+
+function qwe(numbers){
+  let res=[];
+  for (let i=0;i<numbers.length;i++){
+    if (numbers[i]%2==0 && numbers[i]!=0) res.push(numbers[i]);
+  }
+  return res;
+}
+
+let numbers = [4, 9, 2, 11, 8, 90, 0];
+let res=qwe(numbers);
+alert(res);
