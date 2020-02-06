@@ -40,41 +40,51 @@ function checkAge(age) {
 Используя оператор ||
 */
 //Решение 1
-function checkAge(age){
-return (age > 18) ? true : confirm('Родители разрешили?');
+function checkAge(age)
+{
+	return (age > 18) ? true : confirm('Родители разрешили?');
 }
 //Решение 2
-function checkAge(age){
-return age > 18 || confirm('Родители разрешили');
+function checkAge(age)
+{
+	return age > 18 || confirm('Родители разрешили');
 }
 
 /*Задание 3
 Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
 */
 //Решение
-function min(a,b){
-if (a < b) {
-return a;
-} else{
-return b;
-}
+function min(a, b)
+{
+	if (a < b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
 }
 /*Задание 4
 Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
 */
 //Решение
-function pow(x,n){
-let finalX = x;
-for  (i=1, i<n, i++)(
-finalX *= x;
-return finalX;
-)
+function pow(x, n)
+{
+	let finalX = x;
+	for (i = 1, i < n, i++)(
+		finalX *= x;
+		return finalX;
+	)
 }
 
 let x = prompt('Введите х', '');
 let n = prompt('Введите y', '');
-if (n<1) {
-alert('неверное число');
-} else {
-alert(pow(x,n));
+if (n < 1)
+{
+	alert('неверное число');
+}
+else
+{
+	alert(pow(x, n));
 }

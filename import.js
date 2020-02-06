@@ -1,3 +1,7 @@
-import {sayHi} from './export.js';
+import
+{
+	sayHi
+}
+from './export.js';
 console.log(sayHi('John'));
 

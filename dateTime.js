@@ -14,14 +14,15 @@ let date = new Date(2012, 0, 3);  // 3 января 2012 года
 alert( getWeekDay(date) );        // нужно вывести "ВТ"
 */
 //Решение
-function getWeekDay(date) {
-    let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+function getWeekDay(date)
+{
+	let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
 
-    return days[date.getDay()];
-    }
+	return days[date.getDay()];
+}
 let date = new Date(2012, 0, 3);
 
-alert( getWeekDay(date) );
+alert(getWeekDay(date));
 
 /*Задание 2
 В Европейских странах неделя начинается с понедельника (день номер 1), затем идёт вторник (номер 2) и так до воскресенья (номер 7).
@@ -30,12 +31,14 @@ let date = new Date(2012, 0, 3);  // 3 января 2012 года
 alert( getLocalDay(date) );       // вторник, нужно показать 2
 */
 // Решение
- function getLocalDay(date) {
-let day = date.getDay();
-    if (day == 0) {
-      day = 7;
-    }
-    return day;
+function getLocalDay(date)
+{
+	let day = date.getDay();
+	if (day == 0)
+	{
+		day = 7;
+	}
+	return day;
 }
 /*
 Задание 3
@@ -49,11 +52,12 @@ alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
 P.S. Функция не должна изменять переданный ей объект date.
 */
 //Решение
-function getDateAgo(date, days) {
-  let dateCopy = new Date(date);
+function getDateAgo(date, days)
+{
+	let dateCopy = new Date(date);
 
-  dateCopy.setDate(date.getDate() - days);
-  return dateCopy.getDate();
+	dateCopy.setDate(date.getDate() - days);
+	return dateCopy.getDate();
 }
 
 /*
@@ -65,9 +69,10 @@ month – месяц от 0 до 11.
 К примеру, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль).
 */
 //Решение
-function getLastDayOfMonth(year, month) {
-  let date = new Date(year, month + 1, 0);
-  return date.getDate();
+function getLastDayOfMonth(year, month)
+{
+	let date = new Date(year, month + 1, 0);
+	return date.getDate();
 }
 
 /*
@@ -78,9 +83,10 @@ getSecondsToday() == 36000 // (3600 * 10)
 Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
 */
 //Решение
-function getSecondsToday() {
-  let d = new Date();
-  return d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+function getSecondsToday()
+{
+	let d = new Date();
+	return d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
 }
 
 /*
@@ -91,11 +97,12 @@ getSecondsToTomorrow() == 3600
 P.S. Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
 */
 //Решение
-function getSecondsTomorrow() {
-  let d = new Date();
-  let secondsInDay = 86400;
-  let  secondsToday = d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
-  return secondsInDay - secondsToday;
+function getSecondsTomorrow()
+{
+	let d = new Date();
+	let secondsInDay = 86400;
+	let secondsToday = d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+	return secondsInDay - secondsToday;
 }
 /*
 Задание 7
@@ -106,40 +113,44 @@ function getSecondsTomorrow() {
 В противном случае, полная дата в формате "DD.MM.YY HH:mm". А именно: "день.месяц.год часы:минуты", всё в виде двух цифр, т.е. 31.12.16 10:00.
 */
 //Решение
-function formatDate(date){
-  let ms = new Date() - date;
+function formatDate(date)
+{
+	let ms = new Date() - date;
 
-  if (ms < 1000){
-    return 'прямо сейчас';
-  }
+	if (ms < 1000)
+	{
+		return 'прямо сейчас';
+	}
 
-  let sec = Math.floor(ms / 1000);
+	let sec = Math.floor(ms / 1000);
 
-  if (sec < 60) {
-    return sec+ ' сек. назад';
-  }
+	if (sec < 60)
+	{
+		return sec + ' сек. назад';
+	}
 
-  let min = Math.floor(ms / 60000);
+	let min = Math.floor(ms / 60000);
 
-  if (min < 60) {
-    return min + ' мин. назад'
-  }
-    let d = date;
-    d = [
-      '0' + d.getDate(),
-      '0' + (d.getMonth() + 1),
-      '' + d.getFullYear(),
-      '0' + d.getHours(),
-      '0' + d.getMinutes()
-    ].map(component => component.slice(-2));
+	if (min < 60)
+	{
+		return min + ' мин. назад'
+	}
+	let d = date;
+	d = [
+		'0' + d.getDate(),
+		'0' + (d.getMonth() + 1),
+		'' + d.getFullYear(),
+		'0' + d.getHours(),
+		'0' + d.getMinutes()
+	].map(component => component.slice(-2));
 
-    return d.slice(0, 3).join('.') + ' ' + d.slice(3).join(':');
-  }
+	return d.slice(0, 3).join('.') + ' ' + d.slice(3).join(':');
+}
 
-  alert( formatDate(new Date(new Date - 1)) );
+alert(formatDate(new Date(new Date - 1)));
 
-  alert( formatDate(new Date(new Date - 30 * 1000)) );
+alert(formatDate(new Date(new Date - 30 * 1000)));
 
-  alert( formatDate(new Date(new Date - 5 * 60 * 1000)) );
+alert(formatDate(new Date(new Date - 5 * 60 * 1000)));
 
-  alert( formatDate(new Date(new Date - 86400 * 1000)) );
+alert(formatDate(new Date(new Date - 86400 * 1000)));

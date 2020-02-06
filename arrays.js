@@ -63,7 +63,7 @@ function sumInput()
 
 		let value = prompt("Введите число", 0);
 
-		// Прекращаем ввод?
+
 		if (value === "" || value === null || !isFinite(value)) break;
 
 		numbers.push(+value);
@@ -102,10 +102,10 @@ function getMaxSubSum(arr)
 	let partialSum = 0;
 
 	for (let item of arr)
-	{ // для каждого элемента массива
-		partialSum += item; // добавляем значение элемента к partialSum
-		maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
-		if (partialSum < 0) partialSum = 0; // ноль если отрицательное
+	{
+		partialSum += item;
+		maxSum = Math.max(maxSum, partialSum);
+		if (partialSum < 0) partialSum = 0;
 	}
 
 	return maxSum;
