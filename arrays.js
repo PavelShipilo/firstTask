@@ -30,7 +30,7 @@ alert( fruits.length ); // ?
 let styles = ["Джаз", "Блюз"];
 styles.push("Рок-н-ролл");
 styles[Math.floor((styles.length - 1) / 2)] = "Классика";
-alert( styles.shift() );
+alert(styles.shift());
 styles.unshift("Рэп", "Регги");
 
 /*
@@ -43,7 +43,8 @@ arr.push(function() {
 arr[2](); // ?
 */
 //Решение
-"a","b",function
+"a", "b",
+function
 
 /* Задание 4
 Напишите функцию sumInput(), которая:
@@ -53,27 +54,30 @@ arr[2](); // ?
 P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
 */
 //Решение
-function sumInput() {
-  let numbers = [];
+function sumInput()
+{
+	let numbers = [];
 
-  while (true) {
+	while (true)
+	{
 
-    let value = prompt("Введите число", 0);
+		let value = prompt("Введите число", 0);
 
-    // Прекращаем ввод?
-    if (value === "" || value === null || !isFinite(value)) break;
+		// Прекращаем ввод?
+		if (value === "" || value === null || !isFinite(value)) break;
 
-    numbers.push(+value);
-  }
+		numbers.push(+value);
+	}
 
-  let sum = 0;
-  for (let number of numbers) {
-    sum += number;
-  }
-  return sum;
+	let sum = 0;
+	for (let number of numbers)
+	{
+		sum += number;
+	}
+	return sum;
 }
 
-alert( sumInput() );
+alert(sumInput());
 
 /*
 Задание 5
@@ -92,15 +96,17 @@ getMaxSubSum([-1, -2, -3]) = 0
 Попробуйте придумать быстрое решение: O(n2), а лучше за О(n) операций.
 */
 //Решение
-function getMaxSubSum(arr) {
-  let maxSum = 0;
-  let partialSum = 0;
+function getMaxSubSum(arr)
+{
+	let maxSum = 0;
+	let partialSum = 0;
 
-  for (let item of arr) { // для каждого элемента массива
-    partialSum += item; // добавляем значение элемента к partialSum
-    maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
-    if (partialSum < 0) partialSum = 0; // ноль если отрицательное
-  }
+	for (let item of arr)
+	{ // для каждого элемента массива
+		partialSum += item; // добавляем значение элемента к partialSum
+		maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
+		if (partialSum < 0) partialSum = 0; // ноль если отрицательное
+	}
 
-  return maxSum;
+	return maxSum;
 }
