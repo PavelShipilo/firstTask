@@ -18,10 +18,8 @@ delete user.name;
 // Решение
 let schedule = {};
 
-function isEmpty(schedule)
-{
-	for (let prop in schedule)
-	{
+function isEmpty(schedule) {
+	for (let prop in schedule) {
 		return false;
 	}
 	return true;
@@ -54,8 +52,7 @@ let salaries = {
 	Pete: 130
 };
 let sum = 0;
-for (let key in salaries)
-{
+for (let key in salaries) {
 	sum += salaries[key];
 }
 alert(sum);
@@ -86,13 +83,10 @@ let menu = {
 	title: "My menu"
 };
 
-function multiplyNumeric(menu)
-{
-	for (key in menu)
-	{
+function multiplyNumeric(menu) {
+	for (key in menu) {
 
-		if (typeof menu[key] == 'number')
-		{
+		if (typeof menu[key] == 'number') {
 			menu[key] *= 2;
 		}
 	}

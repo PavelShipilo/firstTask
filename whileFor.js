@@ -40,10 +40,8 @@ for (let i = 0; i < 5; ++i) alert( i );
 
 /* Задание 4. При помощи цикла for выведите чётные числа от 2 до 10.*/
 //Решение
-for (i = 2, i <= 10, i++)
-{
-	if (i % 2 == 0)
-	{
+for (i = 2, i <= 10, i++) {
+	if (i % 2 == 0) {
 		alert(i);
 	}
 }
@@ -57,8 +55,7 @@ for (let i = 0; i < 3; i++) {
 */
 //Решение
 let i = 0;
-while (i < 3)
-{
+while (i < 3) {
 	alert(`number ${i}!`);
 	++i;
 }
@@ -84,10 +81,8 @@ do {
   P.S. Код также должен легко модифицироваться для любых других интервалов.*/
 //Решение
 let flag = true;
-for (let i = 2; i <= 10; i++)
-{
-	for (let j = 2; j < i; j++)
-	{
+for (let i = 2; i <= 10; i++) {
+	for (let j = 2; j < i; j++) {
 		if (i % j == 0) flag = false;
 	}
 	if (flag == true) alert(i);

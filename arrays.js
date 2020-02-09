@@ -44,7 +44,7 @@ arr[2](); // ?
 */
 //Решение
 "a", "b",
-function
+	function
 
 /* Задание 4
 Напишите функцию sumInput(), которая:
@@ -54,12 +54,10 @@ function
 P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
 */
 //Решение
-function sumInput()
-{
+function sumInput() {
 	let numbers = [];
 
-	while (true)
-	{
+	while (true) {
 
 		let value = prompt("Введите число", 0);
 
@@ -70,8 +68,7 @@ function sumInput()
 	}
 
 	let sum = 0;
-	for (let number of numbers)
-	{
+	for (let number of numbers) {
 		sum += number;
 	}
 	return sum;
@@ -96,13 +93,11 @@ getMaxSubSum([-1, -2, -3]) = 0
 Попробуйте придумать быстрое решение: O(n2), а лучше за О(n) операций.
 */
 //Решение
-function getMaxSubSum(arr)
-{
+function getMaxSubSum(arr) {
 	let maxSum = 0;
 	let partialSum = 0;
 
-	for (let item of arr)
-	{
+	for (let item of arr) {
 		partialSum += item;
 		maxSum = Math.max(maxSum, partialSum);
 		if (partialSum < 0) partialSum = 0;

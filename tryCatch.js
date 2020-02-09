@@ -12,8 +12,8 @@ while (true) {
 
     break;
   } catch (e) {
-    alert( e.message );
+    alert(e.message);
   }
 }
 
-alert( res );
+alert(res);

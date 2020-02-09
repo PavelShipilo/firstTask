@@ -40,13 +40,11 @@ function checkAge(age) {
 Используя оператор ||
 */
 //Решение 1
-function checkAge(age)
-{
+function checkAge(age) {
 	return (age > 18) ? true : confirm('Родители разрешили?');
 }
 //Решение 2
-function checkAge(age)
-{
+function checkAge(age) {
 	return age > 18 || confirm('Родители разрешили');
 }
 
@@ -54,14 +52,11 @@ function checkAge(age)
 Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
 */
 //Решение
-function min(a, b)
-{
-	if (a < b)
-	{
+function min(a, b) {
+	if (a < b) {
 		return a;
 	}
-	else
-	{
+	else {
 		return b;
 	}
 }
@@ -69,22 +64,19 @@ function min(a, b)
 Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
 */
 //Решение
-function pow(x, n)
-{
+function pow(x, n) {
 	let finalX = x;
-	for (i = 1, i < n, i++)(
+	for (i = 1, i < n, i++){
 		finalX *= x;
-		return finalX;
-	)
+	return finalX;
+	}
 }
 
 let x = prompt('Введите х', '');
 let n = prompt('Введите y', '');
-if (n < 1)
-{
+if (n < 1) {
 	alert('неверное число');
 }
-else
-{
+else {
 	alert(pow(x, n));
 }
