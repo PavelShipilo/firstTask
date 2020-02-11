@@ -1,4 +1,4 @@
-//Задание 1. Напишите if..else, соответствующий следующему switch:
+//Задание 1 Напишите if..else, соответствующий следующему switch:
 /* switch (browser) {
      case 'Edge':
        alert( "You've got the Edge!" );

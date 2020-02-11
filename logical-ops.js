@@ -48,7 +48,7 @@ if (-1 && 0) alert( 'second' );
 if (null || -1 && 1) alert( 'third' );
 */
 //Решение: выведутся первый и третий алерты; true, false, true.
-/*Задача 9.
+/*Задача 9
 последняя задача в статье https://learn.javascript.ru/logical-operators долго переписывать условие*/
 // Решение
 let login;
