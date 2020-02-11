@@ -1,8 +1,5 @@
-let expr, res;
-
-while (true) {
-  expr = prompt("Введите выражение?", '');
-  if (expr == null) break;
+do {
+  this.expr = prompt("Введите выражение?", '');
 
   try {
     res = eval(expr);
@@ -14,6 +11,6 @@ while (true) {
   } catch (e) {
     alert(e.message);
   }
-}
+} while (expr != null);
 
 alert(res);
