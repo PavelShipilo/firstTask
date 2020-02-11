@@ -57,15 +57,14 @@ P.S. Ноль 0 – считается числом, не останавлива
 function sumInput() {
 	let numbers = [];
 
-	while (true) {
+	do {
+		this.value = prompt("Введите число", 0);
 
-		let value = prompt("Введите число", 0);
+		if (value !== "" && value !== null && isFinite(value)) {
+			numbers.push(+value);
+		}
 
-
-		if (value === "" || value === null || !isFinite(value)) break;
-
-		numbers.push(+value);
-	}
+	} while (value !== "" && value !== null && isFinite(value));
 
 	let sum = 0;
 	for (let number of numbers) {
