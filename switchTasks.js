@@ -15,7 +15,7 @@
        alert( 'We hope that this page looks ok!' );
    }
    */
-//Решение
+//Решение.
 if (browser == 'Edge') {
   alert("You've got the Edge!");
 }
