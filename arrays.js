@@ -61,7 +61,7 @@ function sumInput() {
 		this.value = prompt("Введите число", 0);
 
 		if (value !== "" && value !== null && isFinite(value)) {
-			numbers.push(+value);
+			numbers.push(+value); 
 		}
 
 	} while (value !== "" && value !== null && isFinite(value));
